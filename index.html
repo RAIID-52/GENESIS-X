@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genesis X — Autonomous AI Agent</title>
+  <meta name="description" content="Self-Evolving Autonomous AI Agent. 12 Neural Tools. Infinite Memory. Multi-Provider MoE routing with ChromaDB vector memory." />
+  <meta property="og:title" content="Genesis X — Autonomous AI Agent" />
+  <meta property="og:description" content="Self-Evolving Autonomous AI with 12 Neural Tools and Infinite Memory." />
+  <meta name="theme-color" content="#050510" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════ BACKGROUND ═══════════════════ -->
+<div id="aurora">
+  <div class="aurora-blob"></div>
+  <div class="aurora-blob"></div>
+  <div class="aurora-blob"></div>
+  <div class="aurora-blob"></div>
+  <div class="aurora-streak" style="top:20%;background:linear-gradient(to right,transparent,rgba(0,240,255,.15),transparent)"></div>
+  <div class="aurora-streak" style="top:50%;height:1px;background:linear-gradient(to right,transparent,rgba(255,0,229,.1),transparent);animation-delay:-4s;animation-duration:16s"></div>
+  <div class="aurora-streak" style="top:80%;height:1px;background:linear-gradient(to right,transparent,rgba(184,41,255,.1),transparent);animation-delay:-8s;animation-duration:20s"></div>
+</div>
+<canvas id="particle-canvas"></canvas>
+
+<!-- ═══════════════════ PRELOADER ═══════════════════ -->
+<div id="preloader">
+  <div style="position:relative;display:flex;align-items:center;justify-content:center;">
+    <div class="preloader-ring"></div>
+    <div class="preloader-ring"></div>
+    <div class="preloader-center">
+      <span class="preloader-gx">GX</span>
+    </div>
+  </div>
+  <div class="preloader-bar-wrap">
+    <div class="preloader-bar-track">
+      <div class="preloader-bar-fill" id="preloader-fill"></div>
+    </div>
+    <p class="preloader-label" id="preloader-label">INITIALIZING NEURAL SYSTEMS... 0%</p>
+  </div>
+</div>
+
+<!-- ═══════════════════ SITE CONTENT ═══════════════════ -->
+<div id="site-content" style="display:none">
+
+  <!-- ── NAVBAR ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-logo-icon">
+          <span class="nav-logo-gx">GX</span>
+        </div>
+        <div class="nav-logo-text">
+          <div class="nav-brand">
+            <span>GENESIS</span><span> X</span>
+          </div>
+          <span class="nav-tagline">Autonomous Agent</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#features">Features</a>
+        <a href="#neural">Neural Core</a>
+        <a href="#tools">Tools</a>
+        <a href="#stack">Stack</a>
+        <a href="#download" class="nav-dl-btn shimmer">Download</a>
+      </div>
+
+      <button class="nav-mobile-btn" id="mobile-toggle" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="#hero">Home</a>
+        <a href="#features">Features</a>
+        <a href="#neural">Neural Core</a>
+        <a href="#tools">Tools</a>
+        <a href="#stack">Stack</a>
+        <a href="#download" class="mobile-dl">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="cyber-grid"></div>
+    <div class="hex-pattern"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-dot"></span>
+        <span class="hero-badge-text">System Online — v4.1 Stable</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="glitch-text neon-cyan" data-text="GENESIS">GENESIS</span>
+        <span class="glitch-text g2 neon-magenta" data-text="X" style="margin-top:4px">X</span>
+      </h1>
+
+      <div class="hero-typewriter" id="hero-typewriter">&nbsp;</div>
+
+      <p class="hero-desc">
+        A unified intelligence that plans, executes, learns, and evolves. Powered by Multi-Provider MoE routing, ChromaDB vector memory, and ethical AI compliance.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#download" class="cta-primary">
+          <div class="cta-primary-glow"></div>
+          <div class="cta-primary-inner">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download Now
+            <span style="font-size:9px;color:#6a6a8e;font-weight:normal;letter-spacing:normal;text-transform:none">58 KB</span>
+          </div>
+        </a>
+        <a href="#features" class="cta-secondary">Explore System</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-value" style="color:#00f0ff">12</div><div class="stat-label">AI Tools</div></div>
+        <div class="stat"><div class="stat-value" style="color:#ff00e5">4</div><div class="stat-label">AI Providers</div></div>
+        <div class="stat"><div class="stat-value" style="color:#b829ff">∞</div><div class="stat-label">Neural Memory</div></div>
+        <div class="stat"><div class="stat-value" style="color:#39ff14">24/7</div><div class="stat-label">Autonomous</div></div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span class="scroll-label">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section id="features">
+    <div class="energy-line"></div>
+    <div class="features-inner">
+      <div class="features-header reveal">
+        <span class="section-tag cyan">Core Architecture</span>
+        <h2 class="section-title"><span class="dim">Neural </span><span class="cyan">Systems</span></h2>
+        <p class="section-desc">Six interconnected systems creating a truly autonomous superintelligence</p>
+      </div>
+      <div class="bento-grid" id="features-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── NEURAL CORE ── -->
+  <section id="neural">
+    <div class="neural-inner">
+      <div class="neural-header reveal">
+        <span class="section-tag magenta">Live Architecture</span>
+        <h2 class="section-title"><span class="dim">Neural </span><span class="magenta">Core</span></h2>
+      </div>
+      <div class="neural-canvas-wrap reveal">
+        <canvas id="neural-canvas" height="500"></canvas>
+        <div class="neural-live">
+          <span class="live-dot"></span>
+          <span class="live-label">LIVE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TOOLS ── -->
+  <section id="tools">
+    <div class="energy-line"></div>
+    <div class="tools-inner">
+      <div class="tools-header reveal">
+        <span class="section-tag purple">Tool Registry</span>
+        <h2 class="section-title">
+          <span class="dim">12 </span><span class="purple">Integrated</span><span class="dim"> Tools</span>
+        </h2>
+        <p class="section-desc">Every tool connects to the brain, memory, and evolution systems</p>
+      </div>
+      <div class="tools-grid" id="tools-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── STACK ── -->
+  <section id="stack">
+    <div class="stack-inner">
+      <div class="stack-header reveal">
+        <span class="section-tag green">Technology</span>
+        <h2 class="section-title"><span class="dim">Powered By </span><span class="green">Modern Stack</span></h2>
+      </div>
+      <div class="stack-grid" id="stack-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── DOWNLOAD ── -->
+  <section id="download">
+    <div class="energy-line"></div>
+    <div class="download-inner">
+      <div class="download-header reveal">
+        <span class="section-tag blue">Deploy</span>
+        <h2 class="section-title"><span class="dim">Download </span><span class="cyan">Genesis X</span></h2>
+        <p class="section-desc" style="margin-top:0">Install the complete autonomous AI agent on your machine. Python-based, lightweight, and ready to evolve.</p>
+      </div>
+
+      <div class="terminal reveal" data-delay="0.2">
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="terminal-title">genesis-x-terminal</span>
+        </div>
+        <p class="terminal-line" id="terminal-phase" style="color:#00f0ff">> Initializing neural pathways...</p>
+        <div class="terminal-prompt">
+          <span class="t-genesis">genesis</span>
+          <span class="t-at">@</span>
+          <span class="t-x">x</span>
+          <span class="t-colon">:</span>
+          <span class="t-tilde">~</span>
+          <span class="t-dollar">$</span>
+          <span class="typing-cursor">_</span>
+        </div>
+      </div>
+
+      <div class="dl-btn-wrap">
+        <a class="dl-btn" id="dl-btn" href="Genesis-X-v4.zip" download="Genesis-X-v4.zip">
+          <div class="dl-btn-glow"></div>
+          <div class="dl-btn-inner" id="dl-btn-inner">
+            <span id="dl-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </span>
+            <span id="dl-label">Download for PC</span>
+            <span class="dl-size">v4.1 • 58 KB</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="dl-reqs">
+        <span>Python 3.12+</span>
+        <span class="dl-sep">•</span>
+        <span>8GB+ RAM</span>
+        <span class="dl-sep">•</span>
+        <span>Windows / macOS / Linux</span>
+        <span class="dl-sep">•</span>
+        <span>Internet</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">GX</div>
+          <div>
+            <div class="footer-brand"><span>GENESIS</span><span> X</span></div>
+            <p class="footer-sub">Autonomous AI Agent</p>
+          </div>
+        </div>
+        <div class="footer-badges">
+          <span>Open Source</span>
+          <span class="footer-sep">•</span>
+          <span>Self-Evolving</span>
+          <span class="footer-sep">•</span>
+          <span>Sharia Compliant</span>
+        </div>
+      </div>
+      <div class="energy-line" style="margin-top:48px;margin-bottom:24px"></div>
+      <div class="footer-copy">
+        <p>&copy; <span id="footer-year"></span> Genesis X — Enter a New Era of Intelligence</p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /site-content -->
+
+<script src="animations.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
